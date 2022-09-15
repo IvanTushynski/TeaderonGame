@@ -10,7 +10,7 @@ public class MainGame {
 
         Warrior gameWarrior = new Warrior();
         Mage gameMage = new Mage();
-        
+
         //не работает
         System.out.println("Enter Player Class - Mage or Warrior");
         String nameClass = scanClass.nextLine();
