@@ -3,7 +3,7 @@ package com.weapons;
 public class swords {
 
     public class swordOne {
-        int swordOneDamage = 5;
+        int swordOneDamage = 6;
         int swordOneHP = 5;
         int swordOneDefence = 5;
 
