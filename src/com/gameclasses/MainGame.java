@@ -9,8 +9,11 @@ public class MainGame {
         Scanner scanClass = new Scanner(System.in);
 
         Warrior gameWarrior = new Warrior();
+
+
         Mage gameMage = new Mage();
 
+        //выбор класса персонажа
         System.out.println("Select Player Class - Mage(1) or Warrior(2)");
         int nameClass = scanClass.nextInt();
 
@@ -22,6 +25,7 @@ public class MainGame {
             System.out.println("No Such Class...");
         }
 
+        //Просмотр характеристик персонажей
         System.out.println("Enter Player Level");
         int playerLevel = scanLvl.nextInt();
         int expPerLevel = 100;

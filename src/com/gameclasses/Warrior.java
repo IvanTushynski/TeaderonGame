@@ -7,6 +7,7 @@ public class Warrior {
     int mpWarrior = 10;
     int attackWarrior = 10;
     int defenceWarrior = 20;
+    //оружие
 
     public Warrior() {
         this.name = name;
@@ -15,14 +16,15 @@ public class Warrior {
         this.attackWarrior = attackWarrior;
         this.defenceWarrior = defenceWarrior;
     }
-        @Override
-        public String toString() {
-            return "Warrior{" +
-                    "name='" + name + '\'' +
-                    ", hpWarrior=" + hpWarrior +
-                    ", mpWarrior=" + mpWarrior +
-                    ", attackWarrior=" + attackWarrior +
-                    ", defenceWarrior=" + defenceWarrior +
-                    '}';
-        }
+
+    @Override
+    public String toString() {
+        return "Warrior{" +
+                "name='" + name + '\'' +
+                ", hpWarrior=" + hpWarrior +
+                ", mpWarrior=" + mpWarrior +
+                ", attackWarrior=" + attackWarrior +
+                ", defenceWarrior=" + defenceWarrior +
+                '}';
+    }
 }
