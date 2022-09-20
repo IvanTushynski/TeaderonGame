@@ -10,6 +10,7 @@ public class Warrior {
     public static int attackWarrior = 10;
     public static int defenceWarrior = 20;
     public static int levelsWarrior;
+    public static boolean swordTruFalseOne = true;
 
     public Warrior(String name, int hpWarrior, int mpWarrior, int attackWarrior, int defenceWarrior, int levelsWarrior) {
         this.name = name;
@@ -21,26 +22,14 @@ public class Warrior {
     }
 
     public static void stateGen() {
-        if (levelsWarrior > 0 && levelsWarrior <= 20) {
+        if (levelsWarrior > 0 && levelsWarrior <= 20 && !swordTruFalseOne) {
             attackWarrior = attackWarrior + levelsWarrior;
             defenceWarrior = defenceWarrior + levelsWarrior;
             hpWarrior = hpWarrior + levelsWarrior * 2;
-        }
-    }
-    public static void swordOneGen() {
-
-        boolean swordTruFalseOne;
-
-        if (swordTruFalseOne = true) {
+        }else if (levelsWarrior > 0 && levelsWarrior <= 20 && swordTruFalseOne){
             attackWarrior = attackWarrior + levelsWarrior + swords.swordOneDamage;
             defenceWarrior = defenceWarrior + levelsWarrior + swords.swordOneDefence;
             hpWarrior = hpWarrior + levelsWarrior * 2 + swords.swordOneHP;
-        } else {
-            attackWarrior = attackWarrior + levelsWarrior;
-            defenceWarrior = defenceWarrior + levelsWarrior;
-            hpWarrior = hpWarrior + levelsWarrior * 2;
         }
-
-
     }
 }

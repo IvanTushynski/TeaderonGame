@@ -8,11 +8,10 @@ public class MainGame {
     public static void main(String[] args) {
 
         Warrior.stateGen();
-        Warrior.swordOneGen();
+        Warrior.swordTruFalseOne = true;
 
         Scanner gameScan = new Scanner(System.in);
         Warrior.levelsWarrior = gameScan.nextInt();
-        Warrior.swordOneGen();
         System.out.println(Experience.expPerLevelWar + " Experience Needed");
         System.out.println(Warrior.levelsWarrior + " Level");
         System.out.println(Warrior.attackWarrior + " Attack");
