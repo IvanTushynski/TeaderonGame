@@ -1,17 +1,13 @@
 package com.weapons;
 
 public class swords {
+    public static int swordOneDamage = 6;
+    public static int swordOneHP = 5;
+    public static int swordOneDefence = 5;
 
-    public class swordOne {
-        int swordOneDamage = 6;
-        int swordOneHP = 5;
-        int swordOneDefence = 5;
-
-        public swordOne(int swordOneDamage, int swordOneHP, int swordOneDefence) {
-            this.swordOneDamage = swordOneDamage;
-            this.swordOneHP = swordOneHP;
-            this.swordOneDefence = swordOneDefence;
-        }
+    public swords(int swordOneDamage, int swordOneHP, int swordOneDefence) {
+        this.swordOneDamage = swordOneDamage;
+        this.swordOneHP = swordOneHP;
+        this.swordOneDefence = swordOneDefence;
     }
-
 }
