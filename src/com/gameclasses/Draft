@@ -25,3 +25,8 @@ public class test {
                     } else if (warOne.YourRemainingLeaves <= 0) {
                         System.out.println("You Lose... Killed By " + goblinsFight.nameGoblin1);
                     }
+
+
+
+
+                    System.out.println("Attack " + warOne.stateGenAttackWarrior(warOne.attackWarrior));
