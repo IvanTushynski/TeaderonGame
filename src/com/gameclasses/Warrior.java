@@ -1,35 +1,32 @@
 package com.gameclasses;
 
-import com.weapons.swords;
+import com.weapons.Swords;
 
-public class Warrior {
+class Warrior {
 
     String name = "Warrior";
-    public static int hpWarrior = 20;
-    public static int mpWarrior = 10;
-    public static int attackWarrior = 10;
-    public static int defenceWarrior = 20;
-    public static int levelsWarrior;
-    public static boolean swordTruFalseOne = true;
+    int hpWarrior = 20;
+    int mpWarrior = 10;
+    int attackWarrior = 10;
+    int defenceWarrior = 20;
+    int levelsWarrior;
+    boolean swordTruFalseOne;
 
-    public Warrior(String name, int hpWarrior, int mpWarrior, int attackWarrior, int defenceWarrior, int levelsWarrior) {
-        this.name = name;
-        this.hpWarrior = hpWarrior;
-        this.mpWarrior = mpWarrior;
-        this.attackWarrior = attackWarrior;
-        this.defenceWarrior = defenceWarrior;
-        this.levelsWarrior = levelsWarrior;
-    }
+    int expPerLevelWar = 10 * levelsWarrior;
 
-    public static void stateGen() {
+
+    public void stateGen() {
         if (levelsWarrior > 0 && levelsWarrior <= 20 && !swordTruFalseOne) {
             attackWarrior = attackWarrior + levelsWarrior;
             defenceWarrior = defenceWarrior + levelsWarrior;
             hpWarrior = hpWarrior + levelsWarrior * 2;
+            mpWarrior = (mpWarrior + levelsWarrior) + 2;
         }else if (levelsWarrior > 0 && levelsWarrior <= 20 && swordTruFalseOne){
-            attackWarrior = attackWarrior + levelsWarrior + swords.swordOneDamage;
-            defenceWarrior = defenceWarrior + levelsWarrior + swords.swordOneDefence;
-            hpWarrior = hpWarrior + levelsWarrior * 2 + swords.swordOneHP;
+            attackWarrior = attackWarrior + levelsWarrior + Swords.swordOneDamage;
+            defenceWarrior = defenceWarrior + levelsWarrior + Swords.swordOneDefence;
+            hpWarrior = hpWarrior + levelsWarrior * 2 + Swords.swordOneHP;
+            mpWarrior = (mpWarrior + levelsWarrior) + 2;
         }
     }
-}
+
+    }
