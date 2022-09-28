@@ -17,24 +17,31 @@ public class MainGame {
         warOne.swordTruFalseOne = false;
         for (int gameCircle = 1; gameCircle > 0; gameCircle++) {
 
-            warOne.levelsWarrior = 1;
-            warOne.expPerLevelWar = warOne.levelsWarrior * 10;
-            warOne.expAmountWar;
-
+            System.out.print("|Level " + warOne.levelsWarrior);
+            System.out.println("|Exp Amount/Needed To Up Level " + warOne.expAmountWar + "/" + warOne.expPerLevelWar);
 
             //главное меню
             for (int m = 1; m > 0; m++) {
+                //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                warOne.levelsWarrior = 1;
+                warOne.expAmountWar = 0;
+                warOne.expPerLevelWar = warOne.levelsWarrior * 10;
+                if (warOne.expAmountWar >= warOne.expPerLevelWar){
+                    warOne.levelsWarrior = warOne.levelsWarrior + 1;
+                    System.out.println("Level Up!!!");
+                }
                 System.out.println("1 - Hero Info | 2 - Monsters");
                 int menu = gameScan.nextInt();
                 switch (menu) {
                     case 1:
-                        System.out.println("--------------------|Hero Info|--------------------");
+                        System.out.println("---------------------------| Hero Info |------------------------------");
                         System.out.print("|Attack " + warOne.stateGenAttackWarrior(warOne.attackWarrior));
                         System.out.print("|Defence " + warOne.stateGenDefenceWarrior(warOne.defenceWarrior));
                         System.out.print("|Hp " + warOne.stateGenHpWarrior(warOne.hpWarrior));
                         System.out.print("|Mp " + warOne.stateGenMpWarrior(warOne.mpWarrior));
                         System.out.print("|Level " + warOne.levelsWarrior);
-                        System.out.println("|Exp Needed To Up Level " + warOne.expPerLevelWar);
+                        System.out.println("|Exp Amount/Needed To Up Level " + warOne.expAmountWar + "/" + warOne.expPerLevelWar);
+                        System.out.println("----------------------------------------------------------------------");
                         break;
                     case 2:
                         //бой с гоблином 1-----------------------------------------------------
@@ -54,7 +61,7 @@ public class MainGame {
                                         warOne.fightWithGoblin1();
                                         //победа
                                     } else if (warOne.EnemyRemainingLeaves <= 0) {
-                                        warOne.expAmount + goblinsFight.expGoblin1;
+                                        warOne.expAmountWar = warOne.expAmountWar + goblinsFight.expGoblin1;
                                         System.out.println("You Kill " + goblinsFight.nameGoblin1 + "And Obtained " + goblinsFight.expGoblin1 + "XP");
                                         break;
                                         //поражение
@@ -72,10 +79,11 @@ public class MainGame {
                         } else if (fight == 2) {
                             System.out.println("You Are Living In Combat...");
                         }
+                    //case 3:
+                        }
                 }
             }
         }
     }
-}
 
 
