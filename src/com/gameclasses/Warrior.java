@@ -4,17 +4,24 @@ import com.monsters.goblins;
 import com.weapons.Swords;
 
 class Warrior {
+    //Монстры
     goblins gobl1 = new goblins();
 
+    //Статы Перса
     String name = "Warrior";
     int hpWarrior = 20;
     int mpWarrior = 10;
     int attackWarrior = 8;
     int defenceWarrior = 20;
+
+    //Уровень и Опыт
     int levelsWarrior;
+    int expPerLevelWar;
+    int expAmountWar;
+
+    //Оружие
     boolean swordTruFalseOne;
 
-    int expPerLevelWar = 10 * levelsWarrior;
 
 
     public int stateGenAttackWarrior(int attackWarrior) {
