@@ -3,9 +3,8 @@ package com.gameclasses;
 import com.monsters.goblins;
 import com.weapons.Swords;
 
-import java.util.Scanner;
-
 class Warrior {
+    goblins gobl1 = new goblins();
 
     String name = "Warrior";
     int hpWarrior = 20;
@@ -16,10 +15,6 @@ class Warrior {
     boolean swordTruFalseOne;
 
     int expPerLevelWar = 10 * levelsWarrior;
-
-
-    int attackFight;
-    int defFight;
 
 
     public int stateGenAttackWarrior(int attackWarrior) {
@@ -57,14 +52,15 @@ class Warrior {
         }
         return mpWarrior;
     }
+    int YourRemainingLeaves;
+    int EnemyRemainingLeaves;
 
     public void fightWithGoblin1() {
-        goblins gobl1 = new goblins();
         for (int i = 0; i < 1; i++ ){
-            attackFight = gobl1.hpGoblin1 - stateGenAttackWarrior(attackWarrior);
-            defFight = (stateGenDefenceWarrior(defenceWarrior) + stateGenHpWarrior(hpWarrior)) - gobl1.attackGoblin1;
-            System.out.println("You Deal " + "[" + stateGenAttackWarrior(attackWarrior) + "]" + "Damage " + "|Enemy Hp Remaining" + attackFight);
-            System.out.println("Enemy Deal " + "[" + gobl1.attackGoblin1 + "]" + " Damage " + "|Your Hp Remaining" + defFight);
+            EnemyRemainingLeaves = EnemyRemainingLeaves - stateGenAttackWarrior(attackWarrior);
+            YourRemainingLeaves = YourRemainingLeaves - gobl1.attackGoblin1;
+            System.out.println("You Deal " + "[" + stateGenAttackWarrior(attackWarrior) + "] " + "Damage " + "| Enemy Hp Remaining: " + EnemyRemainingLeaves);
+            System.out.println("Enemy Deal " + "[" + gobl1.attackGoblin1 + "] " + " Damage " + "| Your Hp Remaining: " + YourRemainingLeaves);
         }
     }
 }

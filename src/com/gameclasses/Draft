@@ -1,0 +1,27 @@
+package com.gameclasses;
+
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int attack = 20;
+        int health = 200;
+        int healthRemaining = health;
+
+        for (int i = 0; i < 10; i++){
+            if (healthRemaining >= 0)
+            healthRemaining = healthRemaining - attack; //!!!!!!!!!!
+            System.out.println("You Deal " + "[" + attack + "] " + "Damage " + "| Enemy Hp Remaining: " + healthRemaining);
+        }
+    }
+}
+
+                    if (Attack == 1 && warOne.YourRemainingLeaves <= 0) {
+                        warOne.fightWithGoblin1();
+                    } else if (warOne.EnemyRemainingLeaves <= 0) {
+                        System.out.println("You Win Killing " + goblinsFight.nameGoblin1);
+                    } else if (warOne.YourRemainingLeaves <= 0) {
+                        System.out.println("You Lose... Killed By " + goblinsFight.nameGoblin1);
+                    }
