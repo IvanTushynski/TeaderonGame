@@ -1,11 +1,15 @@
 package com.gameclasses;
 
+import com.monsters.Bosses;
 import com.monsters.goblins;
+import com.monsters.wolfs;
 import com.weapons.Swords;
 
 public class Warrior {
     //Монстры
     goblins gobl1 = new goblins();
+    wolfs wolf1 = new wolfs();
+    Bosses boss1 = new Bosses();
 
     //Статы Перса
     public String name = "Warrior";
@@ -18,6 +22,7 @@ public class Warrior {
     int levelsWarrior;
     int expPerLevelWar;
     public int expAmountWar;
+    public int goldAmountWar;
 
     //Оружие
     boolean swordTruFalseOne;
@@ -68,6 +73,42 @@ public class Warrior {
             YourRemainingLeaves = YourRemainingLeaves - gobl1.attackGoblin1;
             System.out.println("You Deal " + "[" + stateGenAttackWarrior(attackWarrior) + "] " + "Damage " + "| Enemy Hp Remaining: " + EnemyRemainingLeaves);
             System.out.println("Enemy Deal " + "[" + gobl1.attackGoblin1 + "] " + " Damage " + "| Your Hp Remaining: " + YourRemainingLeaves);
+        }
+    }
+
+    public void fightWithGoblin2() {
+        for (int i = 0; i < 1; i++ ){
+            EnemyRemainingLeaves = EnemyRemainingLeaves - stateGenAttackWarrior(attackWarrior);
+            YourRemainingLeaves = YourRemainingLeaves - gobl1.attackGoblin2;
+            System.out.println("You Deal " + "[" + stateGenAttackWarrior(attackWarrior) + "] " + "Damage " + "| Enemy Hp Remaining: " + EnemyRemainingLeaves);
+            System.out.println("Enemy Deal " + "[" + gobl1.attackGoblin2 + "] " + " Damage " + "| Your Hp Remaining: " + YourRemainingLeaves);
+        }
+    }
+
+    public void fightWithWolf1() {
+        for (int i = 0; i < 1; i++ ){
+            EnemyRemainingLeaves = EnemyRemainingLeaves - stateGenAttackWarrior(attackWarrior);
+            YourRemainingLeaves = YourRemainingLeaves - wolf1.attackWolf1;
+            System.out.println("You Deal " + "[" + stateGenAttackWarrior(attackWarrior) + "] " + "Damage " + "| Enemy Hp Remaining: " + EnemyRemainingLeaves);
+            System.out.println("Enemy Deal " + "[" + wolf1.attackWolf1 + "] " + " Damage " + "| Your Hp Remaining: " + YourRemainingLeaves);
+        }
+    }
+
+    public void fightWithWolf2() {
+        for (int i = 0; i < 1; i++ ){
+            EnemyRemainingLeaves = EnemyRemainingLeaves - stateGenAttackWarrior(attackWarrior);
+            YourRemainingLeaves = YourRemainingLeaves - wolf1.attackWolf2;
+            System.out.println("You Deal " + "[" + stateGenAttackWarrior(attackWarrior) + "] " + "Damage " + "| Enemy Hp Remaining: " + EnemyRemainingLeaves);
+            System.out.println("Enemy Deal " + "[" + wolf1.attackWolf2 + "] " + " Damage " + "| Your Hp Remaining: " + YourRemainingLeaves);
+        }
+    }
+
+    public void fightWithBoss1() {
+        for (int i = 0; i < 1; i++ ){
+            EnemyRemainingLeaves = EnemyRemainingLeaves - stateGenAttackWarrior(attackWarrior);
+            YourRemainingLeaves = YourRemainingLeaves - boss1.attackBossOne;
+            System.out.println("You Deal " + "[" + stateGenAttackWarrior(attackWarrior) + "] " + "Damage " + "| Enemy Hp Remaining: " + EnemyRemainingLeaves);
+            System.out.println("Enemy Deal " + "[" + boss1.attackBossOne + "] " + " Damage " + "| Your Hp Remaining: " + YourRemainingLeaves);
         }
     }
 }
