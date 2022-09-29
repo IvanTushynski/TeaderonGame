@@ -30,3 +30,12 @@ public class test {
 
 
                     System.out.println("Attack " + warOne.stateGenAttackWarrior(warOne.attackWarrior));
+
+
+                    //поднятие уровня
+                                    warOne.levelsWarrior = 1;
+                                    warOne.expAmountWar = 0;
+                                    warOne.expPerLevelWar = warOne.levelsWarrior * 10;
+                                    if (warOne.expAmountWar >= warOne.expPerLevelWar){
+                                        warOne.levelsWarrior = warOne.levelsWarrior + 1;
+                                        System.out.println("Level Up!!!");

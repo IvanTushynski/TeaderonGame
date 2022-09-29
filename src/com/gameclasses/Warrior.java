@@ -3,21 +3,21 @@ package com.gameclasses;
 import com.monsters.goblins;
 import com.weapons.Swords;
 
-class Warrior {
+public class Warrior {
     //Монстры
     goblins gobl1 = new goblins();
 
     //Статы Перса
-    String name = "Warrior";
-    int hpWarrior = 20;
+    public String name = "Warrior";
+    public int hpWarrior = 20;
     int mpWarrior = 10;
     int attackWarrior = 8;
-    int defenceWarrior = 20;
+    public int defenceWarrior = 20;
 
     //Уровень и Опыт
     int levelsWarrior;
     int expPerLevelWar;
-    int expAmountWar;
+    public int expAmountWar;
 
     //Оружие
     boolean swordTruFalseOne;
@@ -59,8 +59,8 @@ class Warrior {
         }
         return mpWarrior;
     }
-    int YourRemainingLeaves;
-    int EnemyRemainingLeaves;
+    public int YourRemainingLeaves;
+    public int EnemyRemainingLeaves;
 
     public void fightWithGoblin1() {
         for (int i = 0; i < 1; i++ ){
