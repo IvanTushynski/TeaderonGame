@@ -7,7 +7,7 @@ public class goblins {
     public int hpGoblin1 = 20;
     public int expGoblin1 = 5;
 
-    public int goldGoblin1 = 1 + (int) (Math.random()*3);
+    public int goldGoblin1 = 40 + (int) (Math.random()*60);
 
     //goblin2 - Freavell
     public String nameGoblin2 = "Goblin";

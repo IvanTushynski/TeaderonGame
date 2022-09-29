@@ -23,11 +23,10 @@ public class MainGame {
         warOne.stateGenMpWarrior(warOne.mpWarrior);
 
 
-        warOne.swordTruFalseOne = false;
         for (int gameCircle = 1; gameCircle > 0; gameCircle++) {
-            System.out.println("Welcome To Teaderon World!\nThis World is Full of Mysteries And Adventures.");
-            System.out.println("➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨");
-            System.out.println("Enter Your Name Adventurer");
+            System.out.println("Welcome To Teaderon World! This World is Full of Mysteries And Adventures");
+            System.out.println("➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨");
+            System.out.println("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦๖ۣۜG!Enter Your Name Adventurer!๖ۣۜG▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦");
             warOne.name = gameScan.nextLine();
             //экспа - уровень - предметы
             warOne.levelsWarrior = 1;
@@ -55,7 +54,7 @@ public class MainGame {
                         System.out.println("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦");
                         System.out.println("➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨➨");
                         System.out.println("➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼|❂ HERO INFO ❂|➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼➼");
-                        System.out.print(" |Attack " + warOne.stateGenAttackWarrior(warOne.attackWarrior));
+                        System.out.print("|Attack " + warOne.stateGenAttackWarrior(warOne.attackWarrior));
                         System.out.print(" ▦Defence " + warOne.stateGenDefenceWarrior(warOne.defenceWarrior));
                         System.out.print(" ▦Hp " + warOne.stateGenHpWarrior(warOne.hpWarrior));
                         System.out.print(" ▦Mp " + warOne.stateGenMpWarrior(warOne.mpWarrior));
@@ -86,7 +85,7 @@ public class MainGame {
                             //сам цикл боя
                             for (int i = 1; i > 0; i++) {
                                 System.out.println("Your Hero [" + warOne.name + "] Enemy [" + goblinsFight.nameGoblin1 + "]");
-                                System.out.println("Select Enemy Attack-1\nSelect Leave From Battle-2");
+                                System.out.println("❂ Attack-[1] ❂ Leave-[2] ❂");
                                 int Attack = gameScan.nextInt();
                                 if (Attack == 1) {
                                     if (warOne.YourRemainingLeaves > 0 && warOne.EnemyRemainingLeaves > 0) {
@@ -113,8 +112,6 @@ public class MainGame {
                                 } else if (Attack == 2) {
                                     System.out.println("You Are Living In Combat...");
                                     break;
-                                } else {
-                                    System.out.println("Select Attack-1\n Select Leave-2");
                                 }
                             }
                         } else if (fight == 2) {
@@ -124,7 +121,7 @@ public class MainGame {
                             //сам цикл боя
                             for (int i = 1; i > 0; i++) {
                                 System.out.println("Your Hero [" + warOne.name + "] Enemy [" + goblinsFight.nameGoblin2 + "]");
-                                System.out.println("Select Enemy Attack-1\n Select Leave From Battle-2");
+                                System.out.println("❂ Attack-[1] ❂ Leave-[2] ❂");
                                 int Attack = gameScan.nextInt();
                                 if (Attack == 1) {
                                     if (warOne.YourRemainingLeaves > 0 && warOne.EnemyRemainingLeaves > 0) {
@@ -151,8 +148,6 @@ public class MainGame {
                                 } else if (Attack == 2) {
                                     System.out.println("You Are Living In Combat...");
                                     break;
-                                } else {
-                                    System.out.println("Select Attack-1\n Select Leave-2");
                                 }
                             }
                         } else if (fight == 3) {
@@ -162,7 +157,7 @@ public class MainGame {
                             //сам цикл боя
                             for (int i = 1; i > 0; i++) {
                                 System.out.println("Your Hero [" + warOne.name + "] Enemy [" + wolfsFight.nameWolf1 + "]");
-                                System.out.println("Select Enemy Attack-1\nSelect Leave From Battle-2");
+                                System.out.println("❂ Attack-[1] ❂ Leave-[2] ❂");
                                 int Attack = gameScan.nextInt();
                                 if (Attack == 1) {
                                     if (warOne.YourRemainingLeaves > 0 && warOne.EnemyRemainingLeaves > 0) {
@@ -189,8 +184,6 @@ public class MainGame {
                                 } else if (Attack == 2) {
                                     System.out.println("You Are Living In Combat...");
                                     break;
-                                } else {
-                                    System.out.println("Select Attack-1\n Select Leave-2");
                                 }
                             }
                         } else if (fight == 4) {
@@ -200,7 +193,7 @@ public class MainGame {
                             //сам цикл боя
                             for (int i = 1; i > 0; i++) {
                                 System.out.println("Your Hero [" + warOne.name + "] Enemy [" + wolfsFight.nameWolf2 + "]");
-                                System.out.println("Select Enemy Attack-1\nSelect Leave From Battle-2");
+                                System.out.println("❂ Attack-[1] ❂ Leave-[2] ❂");
                                 int Attack = gameScan.nextInt();
                                 if (Attack == 1) {
                                     if (warOne.YourRemainingLeaves > 0 && warOne.EnemyRemainingLeaves > 0) {
@@ -227,8 +220,6 @@ public class MainGame {
                                 } else if (Attack == 2) {
                                     System.out.println("You Are Living In Combat...");
                                     break;
-                                } else {
-                                    System.out.println("Select Attack-1\n Select Leave-2");
                                 }
                             }
                         } else if (fight == 5) {
@@ -238,7 +229,7 @@ public class MainGame {
                             //сам цикл боя
                             for (int i = 1; i > 0; i++) {
                                 System.out.println("Your Hero [" + warOne.name + "] Enemy [" + bossFight.nameBossOne + "]");
-                                System.out.println("Select Enemy Attack-1\nSelect Leave From Battle-2");
+                                System.out.println("❂ Attack-[1] ❂ Leave-[2] ❂");
                                 int Attack = gameScan.nextInt();
                                 if (Attack == 1) {
                                     if (warOne.YourRemainingLeaves > 0 && warOne.EnemyRemainingLeaves > 0) {
@@ -265,8 +256,6 @@ public class MainGame {
                                 } else if (Attack == 2) {
                                     System.out.println("You Are Living In Combat...");
                                     break;
-                                } else {
-                                    System.out.println("Select Attack-1\n Select Leave-2");
                                 }
                             }
                         } else if (fight == 6) {
@@ -274,8 +263,23 @@ public class MainGame {
                         }
                         break;
                     case 3:
-
+                        //магазин!!!!!!!!!!!!!!!!!
+                        System.out.println("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦|❂ FREAVELL TOWN SHOP $$$ ❂|▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦");
+                        System.out.println("▦▦▦ $POTIONS-[1]$ ▦▦▦ $SWORDS-[2]$ ▦▦▦ + " + "BALANCE " + warOne.goldAmountWar + "Gold" + " ▦▦▦");
+                        System.out.println("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦");
+                        int shop = gameScan.nextInt();
+                        if (shop == 1){
+                            System.out.println("Coming soon...");
+                        } else if (shop == 2) {
+                            System.out.println("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦|❂ SHOP ➨ SWORDS $$$ ❂|▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦");
+                            System.out.println("▦ $SWORD-ONE-[1] PRICE-[60G]$ ▦ $SWORD-TWO-[2]$ ▦ + " + "BALANCE " + warOne.goldAmountWar + "Gold" + " ▦▦▦");
+                            int shopSword = gameScan.nextInt();
+                            if (shopSword == 1 && warOne.goldAmountWar >= 60 && !warOne.swordTruFalseOne) {
+                                warOne.swordTruFalseOne = true;
+                                warOne.goldAmountWar = warOne.goldAmountWar - 60;
+                            }
                         }
+                }
                 }
             }
         }
