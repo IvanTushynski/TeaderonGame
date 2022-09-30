@@ -5,10 +5,14 @@ import com.monsters.Bosses;
 import com.monsters.goblins;
 import com.monsters.wolfs;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class MainGame {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Scanner gameScan = new Scanner(System.in);
         Warrior warOne = new Warrior();
         //монстры
@@ -43,10 +47,10 @@ public class MainGame {
                     warOne.expAmountWar = 0;
                     System.out.println("๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG!!!YOUR LEVEL UP!!!๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG๖ۣۜG");
                 }
-                System.out.println("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦");
-                System.out.println("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦|❂ FREAVELL TOWN ❂|▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦");
-                System.out.println("1 - ๖ۣۜG!HERO INFO!๖ۣۜG | 2 - ๖ۣۜG!MONSTER FOREST!๖ۣۜG | 3 - ๖ۣۜG!SHOP!๖ۣۜG");
-                System.out.println("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦");
+                System.out.println("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦");
+                System.out.println("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦|❂ FREAVELL TOWN ❂|▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦");
+                System.out.println("1 - ๖ۣۜG!HERO INFO!๖ۣۜG | 2 - ๖ۣۜG!MONSTER FOREST!๖ۣۜG | 3 - ๖ۣۜG!SHOP!๖ۣۜG | 4 - ๖ۣۜG!SAVE/LOAD!๖ۣۜG");
+                System.out.println("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦");
                 int menu = gameScan.nextInt();
                 switch (menu) {
                     //Инфо по персонажу
@@ -278,6 +282,28 @@ public class MainGame {
                                 warOne.swordTruFalseOne = true;
                                 warOne.goldAmountWar = warOne.goldAmountWar - 60;
                             }
+                        }
+                        break;
+                    case 4:
+                        System.out.println("Save-1/Load-2");
+                        int loadSave = gameScan.nextInt();
+                        //сохранение
+                        if (loadSave == 1) {
+                            File file = new File("src/com/gameclasses/saves");
+                            PrintWriter printWriter = new PrintWriter(file);
+
+                            printWriter.println(warOne.levelsWarrior + " " + warOne.goldAmountWar);
+                            printWriter.close();
+                            //загрузка
+                        } else if (loadSave == 2) {
+                            FileReader fileReader = new FileReader("src/com/gameclasses/saves");
+                            Scanner scannerLoad = new Scanner(fileReader);
+
+                            int level = scannerLoad.nextInt();
+                            int gold = scannerLoad.nextInt();
+                            warOne.levelsWarrior = level;
+                            warOne.goldAmountWar = gold;
+                            scannerLoad.close();
                         }
                 }
                 }
