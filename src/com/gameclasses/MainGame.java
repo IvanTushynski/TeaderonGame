@@ -41,7 +41,7 @@ public class MainGame {
             //главное меню
             for (int m = 1; m > 0; m++) {
                 //Повышение Уровня
-                if (warOne.expAmountWar >= warOne.expPerLevelWar){
+                if (warOne.expAmountWar >= warOne.expPerLevelWar) {
                     warOne.levelsWarrior = warOne.levelsWarrior + 1;
                     warOne.expPerLevelWar = warOne.levelsWarrior * 15;
                     warOne.expAmountWar = 0;
@@ -272,7 +272,7 @@ public class MainGame {
                         System.out.println("▦▦▦ $POTIONS-[1]$ ▦▦▦ $SWORDS-[2]$ ▦▦▦ + " + "BALANCE " + warOne.goldAmountWar + "Gold" + " ▦▦▦");
                         System.out.println("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦");
                         int shop = gameScan.nextInt();
-                        if (shop == 1){
+                        if (shop == 1) {
                             System.out.println("Coming soon...");
                         } else if (shop == 2) {
                             System.out.println("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦|❂ SHOP ➨ SWORDS $$$ ❂|▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦");
@@ -292,7 +292,7 @@ public class MainGame {
                             File file = new File("src/com/gameclasses/saves");
                             PrintWriter printWriter = new PrintWriter(file);
 
-                            printWriter.println(warOne.levelsWarrior + " " + warOne.goldAmountWar);
+                            printWriter.println(warOne.levelsWarrior + " " + warOne.goldAmountWar + " " + warOne.expPerLevelWar);
                             printWriter.close();
                             //загрузка
                         } else if (loadSave == 2) {
@@ -301,14 +301,16 @@ public class MainGame {
 
                             int level = scannerLoad.nextInt();
                             int gold = scannerLoad.nextInt();
+                            int needExp = scannerLoad.nextInt();
                             warOne.levelsWarrior = level;
                             warOne.goldAmountWar = gold;
+                            warOne.expPerLevelWar = needExp;
                             scannerLoad.close();
                         }
-                }
                 }
             }
         }
     }
+}
 
 
